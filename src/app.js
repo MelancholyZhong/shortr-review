@@ -18,6 +18,7 @@ app.use("/api/comment", commentRouter);
 app.use("/api/login", loginRouter);
 app.use("/api/hub", hubRouter);
 
+//Question: this is new to me, is this for error handling when reached a not defined route?
 app.use((err, req, res, next) => {
   console.error(err);
   res.send({
