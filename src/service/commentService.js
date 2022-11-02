@@ -9,6 +9,8 @@ const {
   dbGetCommentsByLinkId,
 } = require("../dao/commentDao");
 
+//A great structure that seperates the DB and the service.
+
 async function createComment(comment) {
   comment.ts = new Date();
   const objectId = await dbCreateComment(comment);
@@ -50,6 +52,7 @@ async function generateUniqueCommentId(objectId) {
   return commentId;
 }
 
+// Now we know how to generate ids better, thanks!
 function generateCommentId(objectId) {
   const sha = crypto.createHash("sha1");
   sha.update(objectId.toString() + new Date());
