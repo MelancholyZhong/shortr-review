@@ -1,7 +1,7 @@
 export function createButton(text) {
   return createElement("button", null, text);
 }
-
+//Great to know this!. We duplicated the navbar in our code, but we can use something like this too.
 export function createHeader() {
   const a = createElement("a", null, "Shortr");
   a.href = "/";
