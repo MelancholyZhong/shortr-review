@@ -159,7 +159,7 @@ button:focus {
 .loggedIn button.showWhenLoggedIn {
   display: inline-block;
 }
-
+/* This hover feed back is really a good way to catch user's eyes! */
 @media (pointer: fine) {
   button:hover {
     cursor: pointer;
