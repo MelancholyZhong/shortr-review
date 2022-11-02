@@ -1,4 +1,5 @@
 const { commentsCollection } = require("../db");
+//This is very good that you putted all the DB functions together.
 
 async function dbCreateComment(comment) {
   const result = await commentsCollection.insertOne(comment);
