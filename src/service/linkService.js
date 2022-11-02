@@ -11,6 +11,7 @@ const {
   dbGetLinksByUser,
 } = require("../dao/linkDao");
 
+//The idea of seperating the service and db operations is awsome, the service functions can do more complecate works using the functions provided by dao.
 async function findUrl(linkId) {
   const link = await dbGetLinkByLinkId(linkId);
   link.hits++;
@@ -67,6 +68,7 @@ async function getHubLinks(user) {
   }
 }
 
+//Good to know this crypto and createHash thing!
 function generateLinkId(objectId) {
   const sha = crypto.createHash("sha1");
   sha.update(objectId.toString() + new Date());
