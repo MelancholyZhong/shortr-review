@@ -9,6 +9,7 @@ const {
 const express = require("express");
 const router = express.Router();
 
+//It is so good that you used next to handle the errors.
 router.post("/", async (req, res, next) => {
   try {
     const commentId = await createComment(req.body);
@@ -58,6 +59,7 @@ router.delete("/:commentId", async (req, res, next) => {
   }
 });
 
+//Using the dynamic url is so important in the project.
 router.get("/byLinkId/:linkId", async (req, res, next) => {
   try {
     const comments = await getCommentsForLink(req.params.linkId);
