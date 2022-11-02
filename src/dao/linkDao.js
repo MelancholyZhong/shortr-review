@@ -48,6 +48,7 @@ async function dbDeleteLink(linkId) {
   }
 }
 
+// This usage of sorting and limit the query result as the top hits is brilliant.
 async function dbGetTopHits() {
   const result = await linksCollection.find().sort({ hits: "desc" }).limit(10);
   if (!result) {
