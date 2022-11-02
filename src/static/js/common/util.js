@@ -1,5 +1,6 @@
 import { createElement } from "./commonElements.js";
 
+// It is so great to learn from you that we can make it a new function that wraps up our http request and it can really save the duplicates of writing headers.
 export async function makeHttpRequest(url, method, body) {
   try {
     let res;
@@ -121,6 +122,7 @@ export function isLoggedIn() {
   return !!getCurrentUser();
 }
 
+// This function is brilliant, by adding a loggedIn class can manage if it showes up.
 export function commonSetup() {
   if (isLoggedIn()) {
     document.body.classList.add("loggedIn");
