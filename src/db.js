@@ -1,5 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
 
+//Maybe the whole url can be a environment variable, it can be simplr.
 const mongoUsername = process.env.MONGO_USERNAME;
 const mongoPassword = process.env.MONGO_PASSWORD;
 const mongoHost = process.env.MONGO_HOST;
